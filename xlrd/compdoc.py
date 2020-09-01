@@ -424,9 +424,9 @@ class CompDoc(object):
         found_limit = (expected_stream_size + sec_size - 1) // sec_size
         while s >= 0:
             if self.seen[s]:
-                if not self.ignore_workbook_corruption:
-                    print("_locate_stream(%s): seen" % qname, file=self.logfile); dump_list(self.seen, 20, self.logfile)
-                    raise CompDocError("%s corruption: seen[%d] == %d" % (qname, s, self.seen[s]))
+#                 if not self.ignore_workbook_corruption:
+#                     print("_locate_stream(%s): seen" % qname, file=self.logfile); dump_list(self.seen, 20, self.logfile)
+#                     raise CompDocError("%s corruption: seen[%d] == %d" % (qname, s, self.seen[s]))
             self.seen[s] = seen_id
             tot_found += 1
             if tot_found > found_limit:
